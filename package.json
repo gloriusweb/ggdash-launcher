@@ -1,0 +1,22 @@
+{
+  "name": "ggdash",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gloriusweb/launcher.git"
+  },
+  "author": "glorius",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gloriusweb/launcher/issues"
+  },
+  "homepage": "https://github.com/gloriusweb/launcher#readme",
+  "devDependencies": {
+    "electron": "^28.2.2"
+  }
+}

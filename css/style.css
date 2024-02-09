@@ -1,0 +1,98 @@
+@font-face {
+    font-family: 'Proza Libre';
+    src: url('../fonts/ProzaLibre.woff2') format('woff2'),
+    url('../fonts/ProzaLibre.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Proza Libre", sans-serif;
+    user-select: none;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.inner-left {
+    padding: 16px 21px 9px 15px;
+    width: 239px;
+    background: rgba(24, 24, 24, 0.37);
+    backdrop-filter: blur(10px);
+}
+
+.inner-right {
+    flex-basis: 250px;
+    flex-grow: 1;
+}
+
+.logo {
+    display: flex;
+    color: #FFF;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px;
+}
+
+.logo-text {
+    margin-left: 14px;
+}
+
+.logo-img {
+    width: 46px;
+    height: 46px;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.btn {
+    display: block;
+    padding-left: 23px;
+    text-align: left;
+    width: 203px;
+    height: 32px;
+    border-radius: 10px;
+    border: 0;
+    background: linear-gradient(180deg, #4F4F4F 0%, #373737 100%);
+    color: #FFF;
+    cursor: pointer;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.btn-active {
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #8EBBFF 0%, #8FF2FF 100%);
+    box-shadow: 0 0 7.5px #8EBBFF, 0 0 7.5px #8FF2FF;
+}
+
+.btn:not(:first-child) {
+    margin-top: 18px;
+}
+
+.btn:first-of-type {
+    margin-top: 40px;
+}
+
+.settings-img {
+    margin-top: 201px;
+    transform: translate(-4px, 4px);
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
