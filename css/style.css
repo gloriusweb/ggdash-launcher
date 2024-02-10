@@ -32,7 +32,8 @@ html, body {
     padding: 16px 21px 9px 15px;
     width: 239px;
     background: rgba(24, 24, 24, 0.37);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(7px);
+    box-shadow: 0 0 5px 5px rgba(24, 24, 24, 0.37);
 }
 
 .inner-right {
@@ -41,7 +42,7 @@ html, body {
     flex-grow: 1;
 }
 
-.logo {
+.aside-logo {
     display: flex;
     color: #FFF;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
@@ -51,11 +52,11 @@ html, body {
     line-height: 50px;
 }
 
-.logo-title {
+.aside-title {
     margin-left: 14px;
 }
 
-.logo img {
+.aside-logo img {
     width: 46px;
     height: 46px;
     border-radius: 10px;
