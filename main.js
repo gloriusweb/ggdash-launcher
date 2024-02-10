@@ -1,6 +1,8 @@
 const path = require('path');
 const url = require('url');
 const {app, BrowserWindow} = require('electron');
+const rpc = require("./rpc.js");
+const clientId = "1205866839662657597";
 
 let win;
 
@@ -34,3 +36,6 @@ app.on('ready', createWindow);
 app.on('window-all-closed', () => {
    app.quit();
 });
+
+rpc.login({ clientId }).catch(console.error);
+rpc.setActivity();
