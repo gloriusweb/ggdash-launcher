@@ -13,6 +13,15 @@
     user-select: none;
 }
 
+ol {
+    padding-left: 20px;
+}
+
+dd {
+    margin-left: 0;
+    margin-bottom: 25px;
+}
+
 html, body {
     padding: 0;
     margin: 0;
@@ -201,8 +210,4 @@ a {
 
 .faq-item {
     margin-bottom: 22px;
-}
-
-.faq-item p {
-    margin: 0;
 }

@@ -95,3 +95,4 @@ dist
 .idea/discord.xml
 .idea/jsLibraryMappings.xml
 npm
+.idea/inspectionProfiles/Project_Default.xml
