@@ -13,18 +13,17 @@ function createWindow() {
         icon: __dirname + "/img/icon.png",
         resizable: false,
         webPreferences: {
-            devTools: false
+            devTools: false,
+            webSecurity: false,
         },
-        autoHideMenuBar: true
+        autoHideMenuBar: true,
     });
 
     win.loadURL(url.format({
         pathname: path.join(__dirname, 'index.html'),
         protocol: 'file:',
         slashes: true
-    }));
-
-    win.webContents.openDevTools();
+    })).then();
 
     win.on('closed', () => {
         win = null;
@@ -38,4 +37,4 @@ app.on('window-all-closed', () => {
 });
 
 rpc.login({ clientId }).catch(console.error);
-rpc.setActivity();
+rpc.setActivity().then();

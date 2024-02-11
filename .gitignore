@@ -91,3 +91,7 @@ dist
 .idea/modules.xml
 .idea/misc.xml
 .idea/ggdash-launcher.iml
+.idea/.name
+.idea/discord.xml
+.idea/jsLibraryMappings.xml
+npm

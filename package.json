@@ -20,6 +20,11 @@
     "electron": "^28.2.2"
   },
   "dependencies": {
-    "discord-rpc": "^4.0.1"
+    "discord-rpc": "^4.0.1",
+    "electron-builder": "^24.9.1",
+    "electron-dl": "^3.5.2",
+    "remote": "^0.0.5",
+    "request-promise": "^0.0.1",
+    "shell": "^0.5.1"
   }
 }

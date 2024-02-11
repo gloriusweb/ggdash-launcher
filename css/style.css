@@ -18,6 +18,29 @@ html, body {
     margin: 0;
 }
 
+a {
+    color: #3D8AFF;
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    box-shadow: 0 0 2px rgba(0, 0, 0, .2) inset;
+    width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #939393;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7c7c7c;
+}
+
 .parent {
     display: flex;
     flex-wrap: wrap;
@@ -80,7 +103,7 @@ html, body {
     font-weight: 400;
 }
 
-.btn-active {
+.btn.active {
     flex-shrink: 0;
     border-radius: 10px;
     background: linear-gradient(180deg, #8EBBFF 0%, #8FF2FF 100%);
@@ -103,27 +126,41 @@ html, body {
     cursor: pointer;
 }
 
-.info-btn {
+.download {
+    display: flex;
+    align-items: center;
+}
+
+.download-btn {
+    width: 203px;
+    height: 32px;
+    border-radius: 10px;
+    border: 0;
+    background: linear-gradient(180deg, #8EBBFF 0%, #8FF2FF 100%);
     color: #FFF;
+    cursor: pointer;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    font-style: normal;
+    font-weight: 400;
     padding-left: 0;
     margin-top: 34px;
     font-size: 16px;
-    font-weight: 400;
     text-align: center;
+    box-shadow: 0 0 11px #8EBBFF, 0 0 11px #8FF2FF;
 }
 
-.info-logo img {
+.download-logo img {
     width: 109px;
     height: 109px;
     border-radius: 10px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
-.info-stats {
+.download-stats {
     margin-left: 25px;
 }
 
-.info-title {
+.content-title {
     color: #FFF;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     font-size: 32px;
@@ -132,23 +169,40 @@ html, body {
     line-height: 50px;
 }
 
-.info-subtitle {
+.download-subtitle {
     color: #FFF;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     font-size: 14px;
     line-height: 30px;
 }
 
-.info-description {
+.content-description {
     margin-top: 23px;
     color: #FFF;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
     font-size: 14px;
-    line-height: 30px /* 200% */;
-
+    line-height: 30px;
 }
 
-.info {
-    display: flex;
-    align-items: center;
+.content {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.faq {
+    width: 449px;
+    height: 425px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.faq-item {
+    margin-bottom: 22px;
+}
+
+.faq-item p {
+    margin: 0;
 }
