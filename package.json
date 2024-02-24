@@ -1,6 +1,6 @@
 {
   "name": "ggdash",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "main.js",
   "scripts": {
@@ -8,22 +8,42 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gloriusweb/launcher.git"
+    "url": "git+https://github.com/gloriusweb/ggdash-launcher.git"
   },
   "author": "glorius",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gloriusweb/launcher/issues"
+    "url": "https://github.com/gloriusweb/ggdash-launcher/issues"
   },
-  "homepage": "https://github.com/gloriusweb/launcher#readme",
+  "homepage": "https://github.com/gloriusweb/ggdash-launcher#readme",
   "devDependencies": {
-    "electron": "^28.2.2"
+    "electron": "^28.2.4",
+    "electron-builder": "^24.12.0"
+  },
+  "build": {
+    "productName": "GGDash",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "./img/icon.png"
+    }
   },
   "dependencies": {
+    "adm-zip": "^0.5.10",
+    "axios": "^1.6.7",
+    "cheerio": "^1.0.0-rc.12",
     "discord-rpc": "^4.0.1",
+    "download": "^8.0.0",
     "electron-dl": "^3.5.2",
-    "remote": "^0.0.5",
+    "electron-download": "^4.1.1",
+    "node-fetch": "^3.3.2",
+    "path": "^0.12.7",
+    "remote": "^0.0.7",
+    "request": "^2.88.2",
     "request-promise": "^0.0.1",
-    "shell": "^0.5.1"
+    "shell": "^0.9.4",
+    "unzipper": "^0.10.14"
   }
 }
