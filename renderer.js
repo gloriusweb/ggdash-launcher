@@ -1,3 +1,17 @@
+const updateData = async () => {
+    const element = document.getElementById("data");
+    element.textContent = "Loading GDPS Stats...";
+    const response = await fetch("https://api.fruitspace.one/v1/repatch/getserverinfo?id=001X");
+    const data = await response.json();
+    const { players, levels } = data;
+    element.textContent = `${players} players • ${levels} levels`;
+};
+
+updateData().then(() => {
+    setInterval(updateData, 30000);
+});
+
+
 let btns = document.getElementsByClassName("btn");
 let contents = document.getElementsByClassName("content");
 
@@ -17,6 +31,7 @@ for (let i = 0; i < btns.length; i++) {
 }
 
 const { ipcRenderer } = require('electron');
+const {send} = require("discord-rpc/src/transports/ipc");
 
 ipcRenderer.on('game-exists', () => {
     document.querySelector('.download-btn').textContent = 'Open';
@@ -49,23 +64,3 @@ ipcRenderer.on('game-not-exists', () => {
         });
     });
 });
-
-
-if (!localStorage.players || !localStorage.levels) {
-    fetch('https://gofruit.space/gdps/001X')
-        .then(response => response.text())
-        .then(data => {
-            const players = data.match(/(\d+) players/)[1];
-            const levels = data.match(/(\d+) levels/)[1];
-
-            localStorage.setItem('players', players);
-            localStorage.setItem('levels', levels);
-
-            const subtitleElement = document.getElementById('data');
-            subtitleElement.innerText = `${players} players • ${levels} levels`;
-        })
-        .catch(error => console.error('Error:', error));
-} else {
-    const subtitleElement = document.getElementById('data');
-    subtitleElement.innerText = `${localStorage.players} players • ${localStorage.levels} levels`;
-}

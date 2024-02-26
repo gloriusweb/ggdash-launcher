@@ -13,6 +13,10 @@
     user-select: none;
 }
 
+img {
+    pointer-events: none;
+}
+
 ol {
     padding-left: 20px;
 }
