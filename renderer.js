@@ -8,7 +8,7 @@ const updateData = async () => {
 };
 
 updateData().then(() => {
-    setInterval(updateData, 30000);
+    setInterval(updateData, 900000);
 });
 
 
