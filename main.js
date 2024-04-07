@@ -31,7 +31,13 @@ async function createWindow() {
         pathname: path.join(__dirname, 'index.html'),
         protocol: 'file:',
         slashes: true
-    })).then();
+    }));
+
+    win.webContents.on('before-input-event', (event, input) => {
+        if (input.key === 'Alt') {
+            event.preventDefault();
+        }
+    });
 
     ipcMain.emit('check-game-exists');
 
