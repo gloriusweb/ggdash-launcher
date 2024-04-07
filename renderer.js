@@ -25,7 +25,7 @@ for (let i = 0; i < btns.length; i++) {
             contents[j].classList.remove("active");
         }
         this.classList.add("active");
-        let id = this.id.slice(-1); // Получаем номер кнопки из ее id
+        let id = this.id.slice(-1);
         document.getElementById("content" + id).classList.add("active");
     });
 }
@@ -64,3 +64,10 @@ ipcRenderer.on('game-not-exists', () => {
         });
     });
 });
+
+function openSettings() {
+    document.getElementById("settings").style.display = "block";
+}
+function closeSettings() {
+    document.getElementById("settings").style.display = "none";
+}

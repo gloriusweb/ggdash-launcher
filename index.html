@@ -10,6 +10,44 @@
 </head>
 <body>
     <div class="parent">
+        <div class="settings-popup" id="settings">
+            <div class="settings-popup-content">
+                <button class="settings-btn-close" onclick="closeSettings()">
+                    <img src="./img/exit.png" alt="close settings">
+                </button>
+                <div class="content-title settings-popup-content-title">
+                    Main Settings
+                </div>
+                <div class="settings-popup-content-row content-description">
+                    <div class="settings-popup-content-row-item">
+                        Window size: <button class="settings-popup-content-row-item-btn">1920:1080</button>
+                    </div>
+                    <div class="settings-popup-content-row-item">
+                        Check updates: <button class="settings-popup-content-row-item-btn">Check</button>
+                    </div>
+                    <div class="settings-popup-content-row-item">
+                        Check game files: <button class="settings-popup-content-row-item-btn">Check</button>
+                    </div>
+                    <div class="settings-popup-content-row-item">
+                        Auto update:
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="settings-popup-content-row-item">
+                        Notifications:
+                        <label class="switch">
+                            <input type="checkbox">
+                            <span class="slider round"></span>
+                        </label>
+                        <div class="settings-popup-content-row-item-description">
+                            (New rates, your rates, new daily/weekly)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="inner-left">
             <div class="aside">
                 <div class="aside-logo">
@@ -30,7 +68,15 @@
                     Shop
                 </button>
 
-                <button class="settings-btn">
+                <button class="btn" id="btn4">
+                    Mods
+                </button>
+
+                <button class="btn" id="btn5">
+                    Updates
+                </button>
+
+                <button class="settings-btn" onclick="openSettings()">
                     <img src="img/settings.png" alt="settings">
                 </button>
             </div>
@@ -140,6 +186,83 @@
                         <p>
                             If you are interested in purchasing any of the roles, go to our website: <a href="https://ggdash.fun/#products">https://ggdash.fun/#products</a>
                         </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content" id="content4">
+                <div class="mods">
+                    <div class="content-title">
+                        MODS
+                    </div>
+                    <div class="content-description">
+                        <div class="mods-item">
+                            <div class="mods-item-content">
+                                <img class="mods-item-content-ava" alt="mod avatar" src="./img/ava.png">
+                                <div class="mods-item-content-info">
+                                    <div class="mods-item-content-info-title">
+                                        Name
+                                    </div>
+                                    <div class="mods-item-info-info-description">
+                                        Description:
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content" id="content5">
+                <div class="updates">
+                    <div class="content-title">
+                        UPDATES
+                    </div>
+                    <div class="content-description">
+                        <div class="updates-item">
+                            <div class="updates-content">
+                                <div class="updates-title">
+                                    Update 1.2 from 04.04.24:
+                                </div>
+                                <ul class="updates-description">
+                                    <li>
+                                        Adding mods and updates sections
+                                    </li>
+                                    <li>
+                                        Adding working settings button
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="updates-item">
+                            <div class="updates-content">
+                                <div class="updates-title">
+                                    Update 1.1 from 24.02.24:
+                                </div>
+                                <ul class="updates-description">
+                                    <li>
+                                        Adding code to switch sections
+                                    </li>
+                                    <li>
+                                        Texture Pack v1.0 created
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="updates-item">
+                            <div class="updates-content">
+                                <div class="updates-title">
+                                    Update 1.0 from 11.02.24:
+                                </div>
+                                <ul class="updates-description">
+                                    <li>
+                                        Launcher Release
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
