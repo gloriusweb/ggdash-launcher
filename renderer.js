@@ -43,7 +43,7 @@ ipcRenderer.on('game-exists', () => {
 ipcRenderer.on('game-not-exists', () => {
     document.querySelector('.download-btn').textContent = 'Download';
     document.querySelector('.download-btn').addEventListener('click', function() {
-        const fileUrl = 'https://www.dropbox.com/scl/fi/yzhxymru0t9kfwgd7dfrk/GGDash.zip?rlkey=i67tabdp7d5306iei7oun5nkm&dl=1';
+        const fileUrl = 'https://www.dropbox.com/scl/fi/78p12w4cmu8kmas9d5nvh/GGDash.zip?rlkey=hhqwyjlg17znmk6xvbmul0zr0&st=0dd93ozw&dl=1';
         const filePath = 'GGDash.zip';
 
         ipcRenderer.send('download-file', fileUrl, filePath);
