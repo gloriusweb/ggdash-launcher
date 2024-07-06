@@ -144,6 +144,21 @@ a {
     cursor: pointer;
 }
 
+.game-btn {
+    margin-left: 40px;
+}
+
+.site-btn {
+    margin-left: 80px;
+}
+
+.site-btn a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
 .download {
     display: flex;
     align-items: center;

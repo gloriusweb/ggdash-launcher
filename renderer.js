@@ -30,7 +30,7 @@ for (let i = 0; i < btns.length; i++) {
     });
 }
 
-const { ipcRenderer } = require('electron');
+const { ipcRenderer, shell} = require('electron');
 const {send} = require("discord-rpc/src/transports/ipc");
 
 ipcRenderer.on('game-exists', () => {
@@ -71,3 +71,10 @@ function openSettings() {
 function closeSettings() {
     document.getElementById("settings").style.display = "none";
 }
+
+const gameButton = document.querySelector('.game-btn');
+gameButton.addEventListener('click', () => {
+    const directoryPath = 'C:/Games/GGDash';
+
+    shell.openExternal(`file://${directoryPath}`);
+});
